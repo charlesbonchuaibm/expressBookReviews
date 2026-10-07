@@ -1,0 +1,29 @@
+curl -X POST http://localhost:4000/customer/login \_project$ curl -X POST http://localhost:4000/customer/login \
+     -H "Content-Type: application/json" \
+     -d '{"username":"Charles","password":"password"}' \
+     -c cookies.txt \
+     -v
+Note: Unnecessary use of -X or --request, POST is already inferred.
+*   Trying 127.0.0.1:4000...
+* Connected to localhost (127.0.0.1) port 4000 (#0)
+> POST /customer/login HTTP/1.1
+> Host: localhost:4000
+> User-Agent: curl/7.81.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 44
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< X-Powered-By: Express
+< Content-Type: application/json; charset=utf-8
+< Content-Length: 41
+< ETag: W/"29-ldhdojv0pqKaca4wRCr3sxVmVfs"
+* Added cookie connect.sid="s%3AmBZeKolELN3dWhZQVi5NSbFbuGBDfK5Y.lUPQQaKfQmmZ2zmDGRmt1ceICWCy%2Fys9GKm5AGPBxPY" for domain localhost, path /, expire 0
+< Set-Cookie: connect.sid=s%3AmBZeKolELN3dWhZQVi5NSbFbuGBDfK5Y.lUPQQaKfQmmZ2zmDGRmt1ceICWCy%2Fys9GKm5AGPBxPY; Path=/; HttpOnly
+< Date: Wed, 07 Oct 2026 07:46:09 GMT
+< Connection: keep-alive
+< Keep-Alive: timeout=5
+< 
+* Connection #0 to host localhost left intact
+{"message":"User successfully logged in"}
