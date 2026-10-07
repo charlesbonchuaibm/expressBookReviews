@@ -1,11 +1,11 @@
-curl -X PUT http://localhost:4000/customer/auth/review/1      -H "Content-Type: application/json"      -d '{"content":"Awesome review."}' -b cookies.txt \   -v
+curl -X PUT http://localhost:4000/customer/auth/review/1      -H "Content-Type: application/json"      -d '{"content":"Awesome review."}' -b cookies.txt   -v
 *   Trying 127.0.0.1:4000...
 * Connected to localhost (127.0.0.1) port 4000 (#0)
 > PUT /customer/auth/review/1 HTTP/1.1
 > Host: localhost:4000
 > User-Agent: curl/7.81.0
 > Accept: */*
-> Cookie: connect.sid=s%3All4mmrQnkhY2nN0uAdi76X-0wb2mxkXg.ctrQ1piS30UJcIXvA66KAxiY268V4frU9ymw1rqGDfc
+> Cookie: connect.sid=s%3AEakDNDzxAgBoPBMeX5bVyogiEf7QoIv7.uqBWb1uprOK2VoffYaxb%2BLBAqo3PfGFuuZscy%2BOGT%2Fw
 > Content-Type: application/json
 > Content-Length: 29
 > 
@@ -13,12 +13,11 @@ curl -X PUT http://localhost:4000/customer/auth/review/1      -H "Content-Type: 
 < HTTP/1.1 200 OK
 < X-Powered-By: Express
 < Content-Type: application/json; charset=utf-8
-< Content-Length: 27
-< ETag: W/"1b-gMm+9NufSDK4bkLbJLMINJWVg3Y"
-< Date: Wed, 07 Oct 2026 07:39:40 GMT
+< Content-Length: 66
+< ETag: W/"42-rLJ040I50LTuXc/GQcx75CId1k0"
+< Date: Wed, 07 Oct 2026 08:32:37 GMT
 < Connection: keep-alive
 < Keep-Alive: timeout=5
 < 
 * Connection #0 to host localhost left intact
-{"message":"Review added."}* Closing connection -1
-curl: (3) URL using bad/illegal format or missing URL
+{"message":"Review added.","review":{"Charles":"Awesome review."}}
