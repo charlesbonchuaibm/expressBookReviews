@@ -72,10 +72,20 @@ regd_users.put("/auth/review/:isbn", (req, res) => {
   let reviews = Object.keys(bookByISBN.reviews);
   if (reviews.includes(username)) {
     bookByISBN.reviews[username] = content; 
-    return res.status(200).json({message: "Review modified."});
+    return res.status(200).json({
+      message: "Review modified.",
+      review: {
+        [username]: content
+      }
+    });
   } else {
     bookByISBN.reviews[username] = content;
-    return res.status(200).json({message: "Review added."});
+    return res.status(200).json({
+      message: "Review added.",
+      review: {
+        [username]: content
+      }
+    });
   }
 });
 
